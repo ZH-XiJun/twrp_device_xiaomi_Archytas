@@ -94,3 +94,58 @@ TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
+
+# SHRP Configuration
+################### ############################################
+# MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
+################### ############################################
+
+# Device codename
+# Default (if not set): N/A
+SHRP_DEVICE_CODE := Archytas
+
+# Path of your SHRP device tree
+# Replace <device-brand> with the device brand name
+# (SHRP_DEVICE_CODE will expand to the above variable so check if that is correct)
+SHRP_PATH := device/xiaomi/$(SHRP_DEVICE_CODE)
+
+# Maintainer name
+# Default (if not set): N/A
+SHRP_MAINTAINER := what_the_bruhhhh
+
+# Recovery Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_REC_TYPE := SAR
+
+# Device Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_DEVICE_TYPE := A_Only
+
+# Your device's recovery path, dont use blindly
+# Default (if not set): N/A
+SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
+
+################### ################################################################################
+# IMPORTANT FLAGS # These are usually good to check - at least if the defaults are what you expect #
+################### ################################################################################
+
+# Emergency DownLoad mode (0 = no EDL mode, 1 = EDL mode available)
+# Default (if not set): 0
+SHRP_EDL_MODE := 0
+
+# Internal storage path
+# Default (if not set): /sdcard
+SHRP_INTERNAL := /sdcard
+
+# External SDcard path
+# Default (if not set): /
+SHRP_EXTERNAL := /external_sd
+
+# USB OTG path
+# Default (if not set): /
+SHRP_OTG := /usb_otg
+
+# Flashlight: (0 = disable, 1 = enable)
+# Default (if not set): 0
+SHRP_FLASH := 0
+
